@@ -363,5 +363,84 @@ about__text {
   font-size: 0.95rem;
 }
 
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+/* 
+  Setup the main container for the entire form. 
+  "max-width" prevents the form from stretching awkwardly wide on desktop screens. 
+  "display: grid" and "gap" stack the form fields neatly on top of each other with consistent spacing.
+*/
+.contact-form {
+  max-width: 480px;
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+/* 
+  Setup the container for an individual input row (the label + the actual typing box).
+  Using grid and a small gap here ensures the text label sits tightly right above its input box.
+*/
+.form-field {
+  display: grid;
+  gap: 0.35rem;
+}
+/* 
+  Style the label text (e.g., "Name", "Email").
+  Makes the text slightly smaller than paragraph text but bolder so it's easy to read.
+*/
+
+.form-field label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+/* 
+  Style the actual boxes where the user types (both single-line inputs and multi-line textareas).
+  This gives them the correct font, comfortable padding inside the box so text doesn't touch the edges, slightly rounded corners, and a subtle border.
+*/ 
+.form-field input,
+.form-field textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+/* 
+  Live error checking (Validation styling). 
+  If the user types an invalid email or leaves a required box blank, the border turns red (#C9503B). 
+  The ":not(:placeholder-shown)" part is a clever trick: it makes sure the box doesn't turn red *before* the user has even tried typing anything.
+*/ 
+.form-field input:invalid:not(:placeholder-shown),
+.form-field textarea:invalid:not(:placeholder-shown) {
+  border-color: #C9503B;
+}
+
+.btn-primary {
+  justify-self: start;
+  background: var(--color-ink);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover { background: var(--color-teal); }
+
+.form-status {
+  min-height: 1.2em;
+  font-size: 0.9rem;
+  color: var(--color-teal);
+  margin: 0;
+}
+
+
 
 
