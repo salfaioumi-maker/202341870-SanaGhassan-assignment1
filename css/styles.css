@@ -278,7 +278,9 @@ main > section {
   max-width: 320px;
   justify-self: center;
 }
-
+/* ==========================================================================
+   About
+   ========================================================================== */
 
 about__text {
   max-width: 68ch;
@@ -301,6 +303,65 @@ about__text {
   color: var(--color-ink);
 }
 
+
+/* ==========================================================================
+   Projects
+   ========================================================================== 
+*/
+
+
+/* 
+  Set up the main container for all your project cards.
+  By default (for mobile devices), it uses a Grid layout with one single column (1fr), 
+  stacking the projects vertically with a large gap between them. 
+  (A media query further down the file usually changes this to two columns for desktop).
+*/
+.projects__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+/* 
+  Style the individual project card container.
+  This adds a thick decorative line (border-top) at the very top of each project 
+  and some padding to push the image down away from the line.
+*/
+
+.project-card {
+  border-top: 2px solid var(--color-ink);
+  padding-top: var(--space-2);
+}
+
+.project-card__image {
+  border-radius: var(--radius);
+  margin-bottom: var(--space-2);
+}
+/* 
+  Style the name of the project.
+  Makes the text slightly larger and adds a small space below it.
+*/
+.project-card__title {
+  font-size: 1.3rem;
+  margin-bottom: var(--space-1);
+}
+
+.project-card__desc {
+  margin: 0 0 var(--space-2);
+}
+/* 
+  Style the actual text for the "Live demo" and "Source code" links.
+  Makes the text slightly smaller than standard body text but gives it a slightly bolder weight to stand out as clickable text.
+*/
+.project-card__links {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.project-card__link {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
 
 
 
