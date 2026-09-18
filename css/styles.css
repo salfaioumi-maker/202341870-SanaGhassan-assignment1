@@ -119,3 +119,40 @@ h1, h2, h3 {
   font-weight: 600;
   margin-bottom: var(--space-3);
 }
+
+
+
+/* 
+  Apply horizontal spacing (left and right padding) to the top header, 
+  the bottom footer, and every major section in the middle of the page. 
+  This ensures that text and images never touch the absolute edges of the screen, 
+  which is especially important for keeping things readable on mobile phones.
+*/ 
+
+site-header,
+main > section,
+.site-footer {
+  padding-left: var(--space-2);
+  padding-right: var(--space-2);
+}
+
+/* 
+  Control the layout and spacing of the main content sections (like About, Projects, and Contact). 
+  
+  First, it sets a maximum width (max-width) so the design doesn't stretch too wide 
+  and become hard to read on large desktop monitors. 
+  
+  Next, "margin-left: auto" and "margin-right: auto" work together to perfectly center 
+  these sections in the middle of the screen. 
+  
+  Finally, it adds large vertical padding to the top and bottom of each section 
+  to give the design plenty of visual breathing room between different topics.
+*/
+
+main > section {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-5);
+}
