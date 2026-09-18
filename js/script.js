@@ -15,3 +15,25 @@ function setFooterYear() {
     yearEl.textContent = new Date().getFullYear();
   }
 }
+
+
+// Display a dynamic greeting (morning, afternoon, etc.) based on the visitor's local time
+function setGreeting() {
+  const greetingEl = document.getElementById('greeting');
+  if (!greetingEl) return;
+
+  const hour = new Date().getHours();
+  let greeting = 'Hello';
+
+  if (hour < 5) {
+    greeting = 'Still up late';
+  } else if (hour < 12) {
+    greeting = 'Good morning';
+  } else if (hour < 18) {
+    greeting = 'Good afternoon';
+  } else {
+    greeting = 'Good evening';
+  }
+
+  greetingEl.textContent = greeting;
+}
