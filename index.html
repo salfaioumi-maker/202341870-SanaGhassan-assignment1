@@ -65,7 +65,7 @@
     </section>
 
 
-      <!-- Projects -->
+      <!-- Adding the projects and linking them with photos -->
     <section id="projects" class="projects">
       <h2 class="section-heading">Selected Projects</h2>
       <div class="projects__grid">
@@ -112,5 +112,31 @@
         </article>
 
       </div>
+    </section>
+
+      <!-- Addition of Contact information and input box-->
+    <section id="contact" class="contact">
+      <h2 class="section-heading">Contact</h2>
+      <p class="contact__intro">For professional inquiries or project collaborations, please leave a message below.</p>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required minlength="2" autocomplete="name">
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">Send message</button>
+        <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+      </form>
     </section>
 
