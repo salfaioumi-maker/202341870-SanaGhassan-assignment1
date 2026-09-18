@@ -73,3 +73,32 @@ function initThemeToggle() {
     }
   }
 }
+
+
+
+
+// Validate the contact form and show a fake success message since there is no backend server
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  if (!form || !status) return;
+// Stop the page from reloading when the user clicks the submit button
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+// Check if the user left any required fields blank or typed an invalid email
+    if (!form.checkValidity()) {
+      status.textContent = 'Please fill in every field before sending.';
+      status.style.color = '#C9503B';
+      form.reportValidity();
+      return;
+    }
+// Get the user's name to make the success message personal
+    const name = form.name.value.trim();
+
+// Show the success message and clear out the form boxes
+    status.style.color = '';
+    status.textContent = `Thanks, ${name}! This is a front-end demo, so your message wasn't actually sent anywhere.`;
+    form.reset();
+  });
+}
+
