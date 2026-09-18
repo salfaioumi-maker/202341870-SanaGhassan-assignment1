@@ -221,4 +221,63 @@ main > section {
   cursor: pointer;
 }
 
+
+
 .theme-toggle:hover { border-color: var(--color-teal); }
+
+
+
+/* 
+  Setup the layout for the main introduction area.
+  By default (for mobile phones), it uses a Grid layout with a single column (1fr).
+  It adds a large gap between the text block and the image, centers the content 
+  vertically, and pushes the whole section down from the top navigation bar.
+*/
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  align-items: center;
+  padding-top: var(--space-5);
+}
+
+.hero__greeting {
+  margin: 0 0 var(--space-1);
+  color: var(--color-teal);
+  font-weight: 500;
+}
+/* 
+  Style your main name header. 
+  The "clamp" function makes the text fluid and responsive: it will be 2.4rem on mobile screens, 
+  and smoothly scale up to a massive 4rem on large desktop monitors.
+*/
+
+.hero__name {
+  font-size: clamp(2.4rem, 1.8rem + 3vw, 4rem);
+  font-weight: 700;
+}
+
+.hero__tagline {
+  margin-top: var(--space-2);
+  font-size: 1.15rem;
+  max-width: 32ch;
+}
+
+
+/* 
+  Style your profile picture/avatar.
+  It rounds the corners, makes sure the image shrinks to fit inside smaller phone screens (width: 100%), 
+  but prevents it from getting overwhelmingly huge on big monitors (max-width: 320px). 
+  Finally, it centers the image in the middle of its grid column.
+*/
+
+.hero__portrait {
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 320px;
+  justify-self: center;
+}
+
+
+
