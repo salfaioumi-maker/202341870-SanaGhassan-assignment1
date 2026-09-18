@@ -1,0 +1,31 @@
+:root {
+  --color-bg: #FBEDEA;       /* light pink */
+  --color-surface: #FFFFFF;
+  --color-ink: #5A3A2E;      /* deep brown — headings, primary text */
+  --color-ink-soft: #7A5A4A; /* muted brown — body text */
+  --color-teal: #87a273;     /* light green — secondary accent */
+  --color-gold: #dc7e9a;     /* dusty brown-pink — highlight accent */
+  --color-border: rgba(90, 58, 46, 0.16);
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --max-width: 920px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.75rem;
+  --space-4: 3rem;
+  --space-5: 5rem;
+
+  --radius: 10px;
+}
+
+[data-theme="dark"] {
+  --color-bg: #2E211D;       /* deep warm brown */
+  --color-surface: #3A2A24;
+  --color-ink: #F7E9E4;      /* warm off-white */
+  --color-ink-soft: #D9BFB2;
+  --color-teal: #A3C589;     /* light green, brightened for contrast */
+  --color-gold: #E3A98D;
+  --color-border: rgba(247, 233, 228, 0.16);
+}
