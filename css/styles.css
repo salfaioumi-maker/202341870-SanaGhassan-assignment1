@@ -280,4 +280,27 @@ main > section {
 }
 
 
+about__text {
+  max-width: 68ch;
+}
+
+.about__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-3);
+}
+
+.about__skills li {
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+}
+
+
+
 
