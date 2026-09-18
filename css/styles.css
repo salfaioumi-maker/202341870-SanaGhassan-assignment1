@@ -29,3 +29,93 @@
   --color-gold: #E3A98D;
   --color-border: rgba(247, 233, 228, 0.16);
 }
+
+/* 
+  Force all elements to include padding and borders in their total width and height.
+  This prevents elements from unexpectedly expanding and breaking the layout.
+*/
+
+
+* { box-sizing: border-box; }
+/* 
+  Enable smooth scrolling across the entire page. 
+  When a user clicks a navigation link (like "About"), the page will smoothly glide down to that section instead of instantly snapping to it.
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+/* 
+  Accessibility feature: Check if the user has "Reduced Motion" enabled in their device's operating system settings (often used by people with motion sickness). 
+  If they do, disable the smooth scrolling and any other animations instantly.
+*/
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}/* 
+  Set the default look for the entire webpage. 
+  This applies the font, background color, and text color using the design variables defined earlier. 
+  The "transition" line ensures that when the user clicks the Dark Mode button, the background and text colors fade smoothly over 0.25 seconds instead of flashing abruptly.
+*/
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-ink-soft);
+  line-height: 1.6;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+/* 
+  Ensure images never stretch wider than their container, keeping them responsive on mobile screens. 
+*/ 
+img { max-width: 100%; display: block; }
+
+a {
+  color: var(--color-teal);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+/* 
+  Accessibility feature: The "Skip to content" link.
+  By default, this button is hidden far off the left side of the screen (-999px). 
+  It is designed for people who navigate the web using a keyboard instead of a mouse.
+*/
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  background: var(--color-ink);
+  color: var(--color-bg);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  z-index: 100;
+}
+/* 
+  When a keyboard user presses the "Tab" key to navigate the page, this link becomes focused. 
+  This code brings the button onto the screen, allowing them to click it and skip past the navigation menu directly into the main projects/about text.
+*/
+
+
+.skip-link:focus {
+  left: var(--space-2);
+  top: var(--space-2);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  margin: 0;
+  line-height: 1.15;
+}
+
+.section-heading {
+  font-size: clamp(1.5rem, 1.1rem + 1.5vw, 2.1rem);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
