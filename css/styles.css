@@ -453,4 +453,42 @@ about__text {
 }
 
 
+/* ==========================================================================
+   Responsive breakpoints
+   ========================================================================== */
+
+/* Tablet and up */
+/* 
+  Tablet adjustments. 
+  The code inside this block only activates when the user's screen is at least 640 pixels wide. 
+  Below this width (on phones), this code is completely ignored.
+*/
+
+
+/* 
+    Change the top Hero section from a single stacked column into two side-by-side columns. 
+    The "1.3fr 1fr" means the text on the left gets slightly more room than the image on the right.
+  */
+@media (min-width: 640px) {
+  .hero {
+    grid-template-columns: 1.3fr 1fr;
+  }
+  .hero__portrait { justify-self: end; }
+}
+
+/* Desktop and up */
+@media (min-width: 900px) {
+  .projects__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  /* 
+    Increase the gap between the navigation links (About, Projects, Contact) in the top header. 
+    Since desktop screens have plenty of horizontal space, spreading these out looks much cleaner.
+  */
+  .nav__links { gap: var(--space-4); }
+}
+
+
 
