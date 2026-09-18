@@ -16,3 +16,24 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+  <--This invisible link allows keyboard users and screen 
+  readers to bypass the navigation menu and jump directly 
+  to the main content of the page.-->
+    
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a href="#top" class="nav__brand">Sana Alfaioumi</a>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">
+        <span class="theme-toggle__icon" aria-hidden="true">☾</span>
+        <span class="theme-toggle__label">Dark mode</span>
+      </button>
+    </nav>
+  </header>
