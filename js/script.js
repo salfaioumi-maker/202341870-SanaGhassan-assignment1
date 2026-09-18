@@ -37,3 +37,39 @@ function setGreeting() {
 
   greetingEl.textContent = greeting;
 }
+
+// Enable the dark/light mode toggle and remember the user's preference
+
+function initThemeToggle() {
+  const toggleBtn = document.getElementById('themeToggle');
+  const label = toggleBtn?.querySelector('.theme-toggle__label');
+  const icon = toggleBtn?.querySelector('.theme-toggle__icon');
+  if (!toggleBtn) return;
+
+  const storedTheme = localStorage.getItem('portfolio-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
+
+  applyTheme(initialTheme);
+
+  toggleBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const nextTheme = isDark ? 'light' : 'dark';
+    applyTheme(nextTheme);
+    localStorage.setItem('portfolio-theme', nextTheme);
+  });
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      toggleBtn.setAttribute('aria-pressed', 'true');
+      if (icon) icon.textContent = '☀';
+      if (label) label.textContent = 'Light mode';
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      toggleBtn.setAttribute('aria-pressed', 'false');
+      if (icon) icon.textContent = '☾';
+      if (label) label.textContent = 'Dark mode';
+    }
+  }
+}
