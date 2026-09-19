@@ -41,10 +41,26 @@ You can view the deployed website on GitHub Pages here:
 * **Automatic Footer Year:** Automatically reflects the current year so the copyright never goes out of date.
   
 ## 🛠️ Local Setup Instructions
-To run and inspect this project locally:
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/salfaioumi-maker/202341870-SanaGhassan-assignment1.git](https://github.com/salfaioumi-maker/202341870-SanaGhassan-assignment1.git)
+
+Follow these step-by-step instructions to clone, run, and test the portfolio application locally on your machine.
+
+### Prerequisites
+Before running the project locally, ensure you have:
+* A modern web browser installed (Google Chrome, Apple Safari, Mozilla Firefox, or Microsoft Edge).
+* Git installed on your operating system (to clone the repository).
+* Visual Studio Code (optional, recommended for viewing the source code).
+
+---
+
+### Step 1: Clone the Repository
+Clone the repository using Git via the terminal or command line:
+
+```bash
+# Clone the remote repository to your local machine
+git clone [https://github.com/salfaioumi-maker/202341870-SanaGhassan-assignment1.git](https://github.com/salfaioumi-maker/202341870-SanaGhassan-assignment1.git)
+
+# Navigate into the project folder
+cd 202341870-SanaGhassan-assignment1
 
 ## AI Integration Summary
 AI tools (Claude and Gemini) were used during development to assist in designing layout structures (CSS Grid and Flexbox), testing color themes, and debugging terminal Git sync issues. All final code, portfolio descriptions, and styling were manually reviewed, edited, and customized.
