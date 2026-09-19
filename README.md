@@ -56,18 +56,23 @@ Before running the project locally, ensure you have:
 Clone the repository using Git via the terminal or command line[cite: 8]:
 
 ``bash
-# Clone the remote repository to your local machine
+## Clone the remote repository to your local machine
 git clone [https://github.com/salfaioumi-maker/202341870-SanaGhassan-assignment1.git](https://github.com/salfaioumi-maker/202341870-SanaGhassan-assignment1.git)
 
-# Navigate into the project folder
+## Navigate into the project folder
 cd 202341870-SanaGhassan-assignment1
 
-
-### Step 2:Run the Website Locally
+## Step 2: Run the Website Locally
 
 You can launch and view the application using either of the following approaches:
-Direct Browser Launch (Quickest): Locate the cloned folder in Finder/File Explorer and double-click index.html (or right-click -> Open With -> your preferred browser) to open the static build immediately.
-Via VS Code Live Server (Recommended): Open the project folder inside VS Code, right-click on index.html, and select "Open with Live Server" to serve the project locally at http://127.0.0.1:5500/ with hot-reloading enabled.
+
+- **Direct Browser Launch (Quickest):** Locate the cloned folder in Finder/File Explorer and double-click `index.html` (or right-click → **Open With** → your preferred browser) to open the static build immediately.
+- **Via VS Code Live Server (Recommended):** Open the project folder in VS Code, right-click `index.html`, and select **Open with Live Server** to serve the project locally at `http://127.0.0.1:5500/` with hot-reloading enabled.
+
+## Step 3: Verification & Testing
+
+- **Layout & Responsiveness:** Open your browser's Developer Tools (`Cmd + Option + I` on macOS or `F12` on Windows) and toggle the device toolbar to check phone, tablet, and desktop layouts.
+- **Interactivity:** Toggle the dark/light mode button in the header, review the dynamic time-based greeting, and submit a test entry in the contact form to verify the client-side validation messages.
 ---
 
 
