@@ -42,25 +42,36 @@ You can view the deployed website on GitHub Pages here:
   
 ## 🛠️ Local Setup Instructions
 
-Follow these step-by-step instructions to clone, run, and test the portfolio application locally on your machine.
+Follow these step-by-step instructions to clone, run, and test the portfolio application locally on your machine[cite: 3].
 
 ### Prerequisites
 Before running the project locally, ensure you have:
 * A modern web browser installed (Google Chrome, Apple Safari, Mozilla Firefox, or Microsoft Edge).
 * Git installed on your operating system (to clone the repository).
-* Visual Studio Code (optional, recommended for viewing the source code).
+* Visual Studio Code (optional, recommended for inspecting source files and live previews)[cite: 8].
 
 ---
 
 ### Step 1: Clone the Repository
-Clone the repository using Git via the terminal or command line:
+Clone the repository using Git via the terminal or command line[cite: 8]:
 
-```bash
+``bash
 # Clone the remote repository to your local machine
 git clone [https://github.com/salfaioumi-maker/202341870-SanaGhassan-assignment1.git](https://github.com/salfaioumi-maker/202341870-SanaGhassan-assignment1.git)
 
 # Navigate into the project folder
 cd 202341870-SanaGhassan-assignment1
+
+
+### Step 2:Run the Website Locally
+
+You can launch and view the application using either of the following approaches:
+Direct Browser Launch (Quickest): Locate the cloned folder in Finder/File Explorer and double-click index.html (or right-click -> Open With -> your preferred browser) to open the static build immediately.
+Via VS Code Live Server (Recommended): Open the project folder inside VS Code, right-click on index.html, and select "Open with Live Server" to serve the project locally at http://127.0.0.1:5500/ with hot-reloading enabled.
+---
+
+
+
 
 ## AI Integration Summary
 AI tools (Claude and Gemini) were used during development to assist in designing layout structures (CSS Grid and Flexbox), testing color themes, and debugging terminal Git sync issues. All final code, portfolio descriptions, and styling were manually reviewed, edited, and customized.
