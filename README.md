@@ -39,7 +39,13 @@ You can view the deployed website on GitHub Pages here:
 * **Dynamic Time Greeting:** Welcomes visitors with a personalized greeting ("Good morning", "Good afternoon") based on their local time.
 * **Instant Form Feedback:** Submissions are handled smoothly in the browser, showing an immediate confirmation note without page reloads.
 * **Automatic Footer Year:** Automatically reflects the current year so the copyright never goes out of date.
-
+  
+## 🛠️ Local Setup Instructions
+To run and inspect this project locally:
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/salfaioumi-maker/202341870-SanaGhassan-assignment1.git](https://github.com/salfaioumi-maker/202341870-SanaGhassan-assignment1.git)
+   
 ## 📁 Project Structure
 
 ```text
