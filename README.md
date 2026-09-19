@@ -45,6 +45,10 @@ To run and inspect this project locally:
 1. Clone the repository:
    ```bash
    git clone [https://github.com/salfaioumi-maker/202341870-SanaGhassan-assignment1.git](https://github.com/salfaioumi-maker/202341870-SanaGhassan-assignment1.git)
+
+## AI Integration Summary
+AI tools (Claude and Gemini) were used during development to assist in designing layout structures (CSS Grid and Flexbox), testing color themes, and debugging terminal Git sync issues. All final code, portfolio descriptions, and styling were manually reviewed, edited, and customized.
+Full details are documented in docs/ai-usage-report.md
    
 ## 📁 Project Structure
 
